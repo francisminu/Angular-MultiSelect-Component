@@ -7,30 +7,19 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class MultiSelectComponent implements OnInit {
 
-  @Input() data;
+  @Input() data: any;
+  @Input() hideAll: boolean;
   @Output() onItemSelected = new EventEmitter<any>();
   selectedItems;
+  isAllSelected = false;
 
   constructor() { }
 
   ngOnInit() {
-    this.data = [
-      {
-        'Id': '01',
-        'Value': 'Name01'
-      },
-      {
-        'Id': '02',
-        'Value': 'Name02'
-      },
-      {
-        'Id': '03',
-        'Value': 'Name03'
-      }];
   }
 
   selectAllItems(event) {
-    console.log('Checked Value: ', event.target.checked);
+    this.isAllSelected = event.target.checked;
     this.data.forEach((item) => {
       item.Selected = event.target.checked;
     });
@@ -39,6 +28,10 @@ export class MultiSelectComponent implements OnInit {
 
   selectItem(event, item) {
     this.data.find((x) => x.Id === item.Id).Selected = event.target.checked;
+    let unselectedValues = this.data.filter((x) => !x.Selected);
+    if (unselectedValues.length > 0) {
+      this.isAllSelected = false;
+    }
     this.getSelectedItems();
   }
 

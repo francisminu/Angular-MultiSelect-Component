@@ -1,7 +1,7 @@
 <div>
-  <div>
+  <div *ngIf="!hideAll">
     <label>
-        <input type="checkbox" id="all" name="all" value="all" (change)="selectAllItems($event)">
+        <input type="checkbox" [checked]="isAllSelected" id="all" name="all" value="all" (change)="selectAllItems($event)">
       <span> All </span>
     </label>
   </div>
