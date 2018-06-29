@@ -1,12 +1,15 @@
 <div>
+  <div>
+    <input [(ngModel)]="searchText" placeholder="Filter">
+  </div>
   <div *ngIf="!hideAll">
     <label>
-        <input type="checkbox" [checked]="isAllSelected" id="all" name="all" value="all" (change)="selectAllItems($event)">
+      <input type="checkbox" [checked]="isAllSelected" id="all" name="all" value="all" (change)="selectAllItems($event)">
       <span> All </span>
     </label>
   </div>
   <div>
-    <div *ngFor="let item of data">
+    <div *ngFor="let item of data | filter: searchText">
       <label>
         <input type="checkbox" [id]="item.Id" [name]="item.Id" [value]="item.Id" [checked]="item.Selected" (change)="selectItem($event, item)">
         <span>{{item.Value}}
