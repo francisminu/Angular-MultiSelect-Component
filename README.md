@@ -20,7 +20,7 @@ Once installed using npm, import the module in app.module.ts as shown below:
 import { MultiSelectModule } from 'angular5-multiselectcheckbox'
 
 @NgModule({
-  declarations: [
+    declarations: [
   ],
   imports: [
     MultiSelectModule
