@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MultiSelectComponent } from './modules/multi-select/multi-select.component';
 
 @Component({
   selector: 'app-root',

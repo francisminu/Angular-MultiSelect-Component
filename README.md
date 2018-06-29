@@ -1,27 +1,64 @@
 # MultiSelectComponent
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+A simple Multi Select Component for web applications. This has been developed in Angular 5.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+*   Checkbox controlled component
+*   Binds to custom data source
+*   Select/De-Select all Items
+*   Selected items are available as output event
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+npm install angular5-multiselectcheckbox
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Once installed using npm, import the module in app.module.ts as shown below:
 
-## Running unit tests
+import { MultiSelectModule } from 'angular5-multiselectcheckbox'
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+    declarations: [
+  ],
+  imports: [
+    MultiSelectModule
+  ]
+})
+export class AppModule { }
 
-## Running end-to-end tests
+## Usage
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+HTML File
 
-## Further help
+<app-multi-select [data]="data" [hideAll]="false" (onItemSelected)="anyCustomMethod($event)"></app-multi-select>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+data: 
+Pass the data in the form of a Key - Value pair of (Id, Value)
+
+hideAll:
+Pass the value as 'false' to display the ALL option
+Pass the value as 'true' to hide the ALL option
+
+onItemSelected:
+This event emits the selected values.
+
+Component File
+
+data = [
+    {
+      'Id': '01',
+      'Value': 'Value1'
+    },
+    {
+      'Id': '02',
+      'Value': 'Value2'
+    },
+    {
+      'Id': '03',
+      'Value': 'Value3'
+    }
+  ];
+
+

@@ -1,16 +1,32 @@
 {
-  "name": "multi-select-component",
-  "version": "0.0.0",
+  "name": "angular5-multiselectcheckbox",
+  "version": "0.0.3",
   "license": "MIT",
+  "homepage": "https://github.com/francisminu/Angular-MultiSelect-Component",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/francisminu/Angular-MultiSelect-Component"
+  },
+  "keywords": [
+    "angular5",
+    "angularmultiselect",
+    "angular-multi-select",
+    "angular5-multiselect-checkbox",
+    "angular5multiselect",
+    "multiselect",
+    "angular5-multiselect",
+    "angular5-multiselectcheckbox"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "packagr": "ng-packagr -p ng-package.json"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -40,6 +56,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^3.0.3",
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",

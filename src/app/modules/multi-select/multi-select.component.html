@@ -1,0 +1,18 @@
+<div>
+  <div *ngIf="!hideAll">
+    <label>
+        <input type="checkbox" [checked]="isAllSelected" id="all" name="all" value="all" (change)="selectAllItems($event)">
+      <span> All </span>
+    </label>
+  </div>
+  <div>
+    <div *ngFor="let item of data">
+      <label>
+        <input type="checkbox" [id]="item.Id" [name]="item.Id" [value]="item.Id" [checked]="item.Selected" (change)="selectItem($event, item)">
+        <span>{{item.Value}}
+        </span>
+      </label>
+    </div>
+  </div>
+
+</div>
