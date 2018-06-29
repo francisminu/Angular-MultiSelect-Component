@@ -57,7 +57,6 @@ export class MultiSelectComponent implements OnInit {
 
   getSelectedItems() {
     let allSelectedItems = this.data.filter((item) => item.Selected);
-    console.log('All items: ', allSelectedItems);
     this.onItemSelected.emit(allSelectedItems);
   }
 

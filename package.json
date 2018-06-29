@@ -1,8 +1,12 @@
 {
   "name": "angular5-multiselectcheckbox",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "homepage": "https://github.com/francisminu/Angular-MultiSelect-Component",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/francisminu/Angular-MultiSelect-Component"
+  },
   "keywords": [
     "angular5",
     "angularmultiselect",

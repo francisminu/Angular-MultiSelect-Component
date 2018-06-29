@@ -30,8 +30,35 @@ export class AppModule { }
 
 ## Usage
 
-Use the component in the .html file:
+HTML File
 
-<angular5-multiselectcheckbox></angular5-multiselectcheckbox>
+<app-multi-select [data]="data" [hideAll]="false" (onItemSelected)="anyCustomMethod($event)"></app-multi-select>
+
+data: 
+Pass the data in the form of a Key - Value pair of (Id, Value)
+
+hideAll:
+Pass the value as 'false' to display the ALL option
+Pass the value as 'true' to hide the ALL option
+
+onItemSelected:
+This event emits the selected values.
+
+Component File
+
+data = [
+    {
+      'Id': '01',
+      'Value': 'Value1'
+    },
+    {
+      'Id': '02',
+      'Value': 'Value2'
+    },
+    {
+      'Id': '03',
+      'Value': 'Value3'
+    }
+  ];
 
 
