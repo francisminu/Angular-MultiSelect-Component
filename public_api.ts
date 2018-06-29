@@ -1,1 +1,1 @@
-export * from './src/app/modules/multi-select/multi-select.module'
+export * from './src/app/modules/multi-select/multi-select.module';

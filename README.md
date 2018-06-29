@@ -4,7 +4,7 @@ A simple Multi Select Component for web applications. This has been developed in
 
 ## Getting Started
 
-##Features
+## Features
 
 *   Checkbox controlled component
 *   Binds to custom data source
@@ -28,4 +28,10 @@ import { MultiSelectModule } from 'angular5-multiselectcheckbox'
 })
 export class AppModule { }
 
-##Usage
+## Usage
+
+Use the component in the .html file:
+
+<angular5-multiselectcheckbox></angular5-multiselectcheckbox>
+
+
