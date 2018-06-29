@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-multi-select',
@@ -12,24 +13,41 @@ export class MultiSelectComponent implements OnInit {
   @Output() onItemSelected = new EventEmitter<any>();
   selectedItems;
   isAllSelected = false;
+  searchText = '';
 
   constructor() { }
 
   ngOnInit() {
-    // this.data = [
-    //   {
-    //     'Id': '01',
-    //     'Value': 'Name1'
-    //   },
-    //   {
-    //     'Id': '02',
-    //     'Value': 'Name2'
-    //   },
-    //   {
-    //     'Id': '03',
-    //     'Value': 'Name3'
-    //   }
-    // ];
+    this.data = [
+      {
+        'Id': '01',
+        'Value': 'Name1'
+      },
+      {
+        'Id': '02',
+        'Value': 'Name2'
+      },
+      {
+        'Id': '03',
+        'Value': 'Name3'
+      },
+      {
+        'Id': '04',
+        'Value': 'Name34'
+      },
+      {
+        'Id': '05',
+        'Value': 'Name35656'
+      },
+      {
+        'Id': '06',
+        'Value': 'Name233'
+      },
+      {
+        'Id': '07',
+        'Value': 'Name1673'
+      }
+    ];
   }
 
   selectAllItems(event) {
@@ -57,6 +75,7 @@ export class MultiSelectComponent implements OnInit {
 
   getSelectedItems() {
     let allSelectedItems = this.data.filter((item) => item.Selected);
+    console.log(allSelectedItems);
     this.onItemSelected.emit(allSelectedItems);
   }
 
